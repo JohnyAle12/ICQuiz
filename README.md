@@ -14,6 +14,6 @@ $ composer install
 For execute the test you can run
 
 ```bash
-# generat new key aplication on the .env file
+# execute quickly all tests
 $ vendor/phpunit/phpunit/phpunit tests
 ```
