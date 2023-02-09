@@ -21,7 +21,14 @@ class MaximumNumberTest extends TestCase
         $operation = new MaximumNumber();
         $result = $operation->findMaximum($inputNumbers);
 
+        $this->printResults($inputNumbers, $result);
         $this->assertEquals($result, $expectedResult);
+    }
+
+    private function printResults(array $inputNumbers, int $result): void
+    {
+        $text = 'Input: ' . implode(',', $inputNumbers) .' | Output: ' . $result . PHP_EOL;
+        fwrite(STDOUT, print_r($text, TRUE));
     }
 
     public static function getCasesByInputNumbers(): array
