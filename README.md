@@ -15,5 +15,5 @@ For execute the test you can run
 
 ```bash
 # execute quickly all tests
-$ vendor/phpunit/phpunit/phpunit tests
+$ composer t tests
 ```

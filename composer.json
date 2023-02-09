@@ -8,6 +8,9 @@
             "App\\": "app/"
         }
     },
+    "scripts": {
+        "t": "vendor/phpunit/phpunit/phpunit --color"
+    },
     "authors": [
         {
             "name": "Johny Prieto",
