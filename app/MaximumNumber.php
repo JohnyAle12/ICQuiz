@@ -9,10 +9,12 @@ class MaximumNumber
     public function findMaximum(array $params): int
     {
         [$x, $y, $n] = $params;
+
+        if(!$this->validateInput($x, $y, $n)){
+            return -1;
+        }
         
-        $maximun = $this->getMaximumNumber($x, $y, $n);
-        
-        return (($maximun >= 0 && $maximun <= $n) ? $maximun : 0);
+        return $this->getMaximumNumber($x, $y, $n);
     }
 
     private function getMaximumNumber(int $x, int $y, int $n): int
@@ -24,5 +26,21 @@ class MaximumNumber
             }
         }
         return $maximun;
+    }
+
+    private function validateInput(int $x, int $y, int $n): bool
+    {
+        if(
+            $x >= 2 &&
+            $x <= pow(10, 9) &&
+            $y >= 0 &&
+            $y < $x &&
+            $y <= $n &&
+            $n <= pow(10, 9)
+        ){
+            return true;
+        }
+        
+        return false;
     }
 }

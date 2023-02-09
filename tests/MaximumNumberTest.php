@@ -54,6 +54,10 @@ class MaximumNumberTest extends TestCase
             'When the find function receives the parameters 2,0,999999999' => [
                 'inputNumbers' => [2,0,999999999],
                 'expectedResult' => 999999998,
+            ],
+            'When the find function receives bad parameters' => [
+                'inputNumbers' => [0,0,0],
+                'expectedResult' => -1,
             ]
         ];
     }
